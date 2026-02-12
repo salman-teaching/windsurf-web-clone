@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Windsurf primary";
+  src: url("https://windsurf.com/_next/static/media/3ecc75a922018515-s.p.woff2");
+}
+
+@font-face {
+  font-family: "Windsurf secondary";
+  src: url("https://windsurf.com/_next/static/media/13971731025ec697-s.p.woff2");
+}
+
+h1 {
+  font-family: "Windsurg primary";
+}
+p {
+  font-family: "Windsurf secondary";
+}
