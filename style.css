@@ -36,6 +36,23 @@ header a {
   font-weight: bold;
 }
 
+nav a {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #ffffff33;
+}
+
+nav a i {
+  transition: rotate 0.15s ease-in-out;
+}
+
+nav a:hover i {
+  rotate: 180deg;
+}
+
 .windsurf-logo {
   width: 160px;
 }
@@ -65,4 +82,22 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 20px;
+}
+
+.nav-link-1 {
+  position: relative;
+}
+
+.nav-link-1:hover .box-1 {
+  display: block;
+}
+
+.box-1 {
+  background-color: aquamarine;
+  height: 300px;
+  width: 200px;
+  position: absolute;
+  top: 8vh;
+  left: -4px;
+  display: none;
 }
