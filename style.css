@@ -19,14 +19,26 @@ a {
   text-decoration: none;
 }
 
+::selection {
+  background-color: var(--secondary-color);
+  color: black;
+}
+
+:root {
+  --primary-color: #011c42;
+  --secondary-color: #34e8bb;
+  --font-primary: "Windsurf primary";
+  --font-secondary: "Windsurf secondary";
+}
+
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #011c42;
+  background-color: var(--primary-color);
   height: 12vh;
   align-items: center;
   padding-left: 6vw;
-  font-family: "Windsurf secondary";
+  font-family: var(--font-secondary);
 
   text-transform: uppercase;
 }
@@ -36,13 +48,19 @@ header a {
   font-weight: bold;
 }
 
+nav div {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+}
+
+nav div:hover a {
+  background-color: #ffffff33;
+}
+
 nav a {
   padding: 8px;
   border-radius: 8px;
-}
-
-nav a:hover {
-  background-color: #ffffff33;
 }
 
 nav a i {
@@ -60,6 +78,7 @@ nav a:hover i {
 nav {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .header-last {
@@ -69,13 +88,32 @@ nav {
 }
 
 .user-profile {
-  border: 1px solid white;
   border-radius: 50%;
-  padding: 8px;
+  padding: 2px;
+  transition: border 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.user-profile:hover {
+  border: 2px solid var(--secondary-color);
+}
+
+.user-profile i {
+  border: 1px solid white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile:hover {
+  /* outline: 2px solid #34e8bb; */
 }
 
 .download-btn {
-  background-color: #34e8bb;
+  background-color: var(--secondary-color);
   color: black;
   height: 12vh;
   display: inline-block;
@@ -97,7 +135,58 @@ nav {
   height: 300px;
   width: 200px;
   position: absolute;
-  top: 8vh;
+  top: 12vh;
   left: -4px;
   display: none;
+}
+
+/* main section start */
+
+main {
+  height: 88vh;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 6vw;
+}
+
+main h1 {
+  color: white;
+  font-family: var(--font-primary);
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.main-options {
+  display: flex;
+  gap: 12px;
+  margin: 8vh 0;
+}
+
+.main-options button,
+.main-options a {
+  padding: 16px 32px;
+  border-radius: 2px;
+  font-family: var(--font-secondary);
+}
+
+.main-options button {
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+.main-options a {
+  background-color: #ffffff33;
+}
+
+.main-subtext {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-secondary);
+}
+
+.main-subtext div {
+  height: 8px;
+  width: 8px;
+  background-color: var(--secondary-color);
 }
